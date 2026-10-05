@@ -1,16 +1,18 @@
-import { Box, Typography } from "@mui/material";
-import FavoriteIcon from "@mui/icons-material/Favorite";
+import { Box } from "@mui/material";
 import { invitation } from "../config/invitation";
 
 const Thanks = () => (
-  <Box component="footer" sx={{ py: 10, px: 3, textAlign: "center", color: "#24777D", background: "linear-gradient(180deg, #fff, #D8ECEB)" }}>
-    <Typography sx={{ maxWidth: 650, mx: "auto", fontFamily: "'Catchy'", fontSize: { xs: "1.4rem", md: "1.8rem" }, lineHeight: 1.7 }}>
-      Gracias por acompañarme en este momento tan especial.
-    </Typography>
-    <FavoriteIcon sx={{ my: 3, fontSize: 24 }} />
-    <Typography sx={{ fontFamily: "'Italian'", fontSize: { xs: "5rem", md: "6rem" }, lineHeight: 1.2 }}>
-      {invitation.name}
-    </Typography>
+  <Box component="footer" sx={{ display: "flex", justifyContent: "center", width: "100%", m: 0, p: 0, backgroundColor: "#ECF6F5" }}>
+    <Box
+      component="img"
+      src="/assets/galeria/gracias.jpeg"
+      alt={"Gracias por acompañarme en este momento tan especial. " + invitation.name}
+      width={1330}
+      height={1182}
+      loading="lazy"
+      decoding="async"
+      sx={{ display: "block", width: "100%", maxWidth: 960, height: "auto" }}
+    />
   </Box>
 );
 

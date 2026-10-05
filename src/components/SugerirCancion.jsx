@@ -70,7 +70,7 @@ const SuggestSong = () => {
 
          <Button
   component="a"
-  href="https://docs.google.com/forms/d/e/1FAIpQLSf5DeFbqRMFtkzF-fy4rM6seEyDVme6bzIfeOsOPMlVds2Z9w/viewform"
+  href="https://open.spotify.com/playlist/1H9tHXd1xP4mNrRQEzSaCT?si=1BFL9y_TQr60r5uOGPnjFw&utm_source=whatsapp&pi=kKQHr7jjR5uLn"
   target="_blank"
   rel="noopener noreferrer"
   variant="contained"

@@ -60,7 +60,7 @@ const Confirm = () => {
         {/* Botón */}
         <ButtonLinks
           label="Confirmar Asistencia"
-          href="https://docs.google.com/forms/d/e/1FAIpQLSf-ST49yt4GCtdtIzy7PntJIpt49jiC11_nCnIgXa_cLTzNqA/viewform"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSePVG-ZD84H0fkORZb-mm_37kicag5lRsqU4Dq027Q-dMH9yw/viewform?usp=sharing&ouid=110741827931697375687"
           newTab
         />
       </Box>

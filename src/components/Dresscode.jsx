@@ -65,6 +65,17 @@ const Dresscode = () => {
 >
  Elegante Sport
 </Typography>
+          <Typography
+            sx={{
+              fontFamily: "'Catchy'",
+              fontSize: { xs: "1.1rem", md: "1.3rem" },
+              color: "#24777D",
+              mt: 2,
+              lineHeight: 1.6,
+            }}
+          >
+            No dorado, plateado, azul y verde
+          </Typography>
 
         </Box>
       </Fade>

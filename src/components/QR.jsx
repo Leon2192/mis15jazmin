@@ -127,7 +127,7 @@ const Qr = () => {
           <Box mt={2}>
             <QrButton
               label="Ir Al Album"
-              href="https://photos.google.com/share/AF1QipNrbjwGmp91UljZg5KGeaKidRyuNzcJiyaPlZP4elnkH3FKRoISAJV_frMpwaeNjA?key=ZkNhRFQyNW12V1kwQXBadUFyaUh6WnFYQjQwZDB3"
+              href="https://photos.app.goo.gl/M99i1uuiEYm7yyF79"
               newTab
             />
           </Box>

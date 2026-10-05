@@ -12,7 +12,11 @@ import "swiper/css";
 import { invitation } from "../../config/invitation";
 
 const photoAssets = import.meta.glob(
-  "/public/assets/galeria/**/*.{jpg,jpeg,png,webp,avif,JPG,JPEG,PNG,WEBP,AVIF}",
+  [
+    "/public/assets/galeria/**/*.{jpg,jpeg,png,webp,avif,JPG,JPEG,PNG,WEBP,AVIF}",
+    "!/public/assets/galeria/gracias.jpeg",
+    "!/public/assets/galeria/min.jpeg",
+  ],
   { eager: true, query: "?url", import: "default" },
 );
 const photos = Object.entries(photoAssets)

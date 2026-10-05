@@ -6,7 +6,7 @@ La fecha, el horario y la ubicación de la invitación se configuran en `src/con
 
 Agregar las fotos en `public/assets/galeria/`. Se admiten JPG, JPEG, PNG, WebP y AVIF. Nombrarlas `01.jpg`, `02.jpg`, etc. para elegir el orden. Solo las imágenes de esta carpeta se incluyen en la galería.
 
-Los GIF quedan fuera. Sin fotos, aparece un mensaje de próxima publicación.
+Los GIF y las imágenes `gracias.jpeg` (cierre) y `min.jpeg` (metadata) quedan fuera del carrusel. Sin fotos, aparece un mensaje de próxima publicación.
 
 Después de agregar fotos, reiniciar `npm run dev` o volver a ejecutar `npm run build` para incluirlas. La galería muestra una sola foto completa y centrada por vez, con avance automático cada 4,5 segundos, flechas y gestos táctiles. El avance automático se pausa fuera de la galería, al abrir una foto o con el botón de pausa; se desactiva cuando el dispositivo pide movimiento reducido.
 
