@@ -155,7 +155,7 @@ const Gift = () => {
             }}>
               Nombre del titular: Jazmin Maria Aquino
               <br />
-              Alias: jazminaquino
+              Alias: jazminaquino.
         
             </Typography>
 
