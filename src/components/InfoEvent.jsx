@@ -23,10 +23,7 @@ const InfoEvent = () => {
           <Typography component="p" sx={{ ...textSx, fontWeight: 700 }}>
             <time dateTime={invitation.startsAt}>{invitation.dateLabel}</time>
           </Typography>
-          <Typography sx={{ ...textSx, mb: 1 }}>{invitation.timeLabel}</Typography>
-          <Typography sx={{ ...textSx, fontSize: "0.95rem", mb: 3 }}>
-            Hasta la madrugada del {invitation.endDateLabel}
-          </Typography>
+          <Typography sx={{ ...textSx, mb: 3 }}>{invitation.timeLabel}</Typography>
           <Typography sx={{ ...textSx, fontWeight: 700 }}>{invitation.venue}</Typography>
           <Typography sx={{ ...textSx, mb: 4 }}>{invitation.address}</Typography>
           <ButtonLinks label="Cómo llegar" href={invitation.mapsUrl} newTab />

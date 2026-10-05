@@ -8,7 +8,7 @@ Agregar las fotos en `public/assets/galeria/`. Se admiten JPG, JPEG, PNG, WebP y
 
 Los GIF quedan fuera. Sin fotos, aparece un mensaje de próxima publicación.
 
-Después de agregar fotos, reiniciar `npm run dev` o volver a ejecutar `npm run build` para incluirlas. La galería muestra una sola foto completa por vez, con avance automático cada 4,5 segundos, flechas, indicadores y gestos táctiles. El avance automático se pausa fuera de la galería, al abrir una foto o con el botón de pausa; se desactiva cuando el dispositivo pide movimiento reducido.
+Después de agregar fotos, reiniciar `npm run dev` o volver a ejecutar `npm run build` para incluirlas. La galería muestra una sola foto completa y centrada por vez, con avance automático cada 4,5 segundos, flechas y gestos táctiles. El avance automático se pausa fuera de la galería, al abrir una foto o con el botón de pausa; se desactiva cuando el dispositivo pide movimiento reducido.
 
 Cada foto abre un carrusel a pantalla completa, con gestos táctiles, flechas, navegación por teclado y cierre con Escape. Al cerrar, la galería conserva la última foto vista.
 

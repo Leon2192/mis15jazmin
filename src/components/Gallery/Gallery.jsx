@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import { Box, ButtonBase, Dialog, IconButton, Typography, useMediaQuery } from "@mui/material";
-import PhotoCameraOutlinedIcon from "@mui/icons-material/PhotoCameraOutlined";
 import CloseIcon from "@mui/icons-material/Close";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
@@ -78,9 +77,8 @@ const Gallery = () => {
     >
       <Box sx={{ maxWidth: 760, mx: "auto", minWidth: 0 }}>
         <Box sx={{ textAlign: "center", mb: 3, color: "#24777D" }}>
-          <PhotoCameraOutlinedIcon sx={{ fontSize: 30, mb: 1 }} />
           <Typography component="h2" id="gallery-title" sx={{ fontFamily: "'Italian'", fontSize: { xs: "3.8rem", md: "5rem" }, lineHeight: 1.3 }}>
-            Mis momentos
+            Galeria
           </Typography>
           <Typography sx={{ fontFamily: "'Catchy'", fontSize: { xs: "1rem", md: "1.3rem" }, mt: 1, lineHeight: 1.6 }}>
             Un poquito de mí, antes de esta noche tan especial.
@@ -88,8 +86,11 @@ const Gallery = () => {
         </Box>
 
         {photos.length > 0 ? (
-          <Box sx={{ maxWidth: 480, width: "100%", mx: "auto", minWidth: 0 }}>
+          <Box sx={{ maxWidth: 480, width: "100%", mx: "auto", minWidth: 0, display: "flex", flexDirection: "column", alignItems: "center" }}>
             <Box sx={{
+              width: "100%",
+              mx: "auto",
+              boxSizing: "border-box",
               aspectRatio: "2 / 3",
               maxHeight: "min(68svh, 660px)",
               overflow: "hidden",
@@ -97,11 +98,12 @@ const Gallery = () => {
               backgroundColor: "#E1EEEB",
               boxShadow: "0 12px 36px rgba(36,119,125,0.14)",
               "& .swiper": { width: "100%", height: "100%" },
-              "& .swiper-slide": { height: "100%" },
+              "& .swiper-slide": { height: "100%", display: "flex", alignItems: "center", justifyContent: "center" },
             }}>
               <Swiper
                 modules={[A11y, Autoplay, Keyboard]}
                 slidesPerView={1}
+                centeredSlides
                 loop={hasMultiplePhotos}
                 speed={reduceMotion ? 0 : 600}
                 autoplay={hasMultiplePhotos ? { delay: 4500, disableOnInteraction: false, pauseOnMouseEnter: true } : false}
@@ -125,7 +127,7 @@ const Gallery = () => {
                         loading="lazy"
                         decoding="async"
                         draggable={false}
-                        sx={{ display: "block", width: "100%", height: "100%", objectFit: "contain" }}
+                        sx={{ display: "block", width: "100%", height: "100%", objectFit: "contain", objectPosition: "center" }}
                       />
                     </ButtonBase>
                   </SwiperSlide>
@@ -149,25 +151,10 @@ const Gallery = () => {
               )}
             </Box>
 
-            {hasMultiplePhotos && (
-              <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", flexWrap: "wrap", mt: 1 }}>
-                {photos.map((src, index) => (
-                  <ButtonBase
-                    key={src}
-                    onClick={() => mainSwiper?.slideToLoop(index)}
-                    aria-label={"Ir a la foto " + (index + 1)}
-                    aria-current={activeIndex === index ? "true" : undefined}
-                    sx={{ width: 32, height: 44, borderRadius: 2 }}
-                  >
-                    <Box sx={{ width: activeIndex === index ? 20 : 7, height: 7, borderRadius: 999, backgroundColor: activeIndex === index ? "#24777D" : "#AACCC7", transition: reduceMotion ? "none" : "width 0.3s ease" }} />
-                  </ButtonBase>
-                ))}
-                {!reduceMotion && (
-                  <IconButton onClick={() => setIsPaused((paused) => !paused)} aria-label={isPaused ? "Reanudar carrusel" : "Pausar carrusel"} sx={{ color: "#24777D", width: 44, height: 44, ml: 1 }}>
-                    {isPaused ? <PlayArrowIcon fontSize="small" /> : <PauseIcon fontSize="small" />}
-                  </IconButton>
-                )}
-              </Box>
+            {hasMultiplePhotos && !reduceMotion && (
+              <IconButton onClick={() => setIsPaused((paused) => !paused)} aria-label={isPaused ? "Reanudar carrusel" : "Pausar carrusel"} sx={{ color: "#24777D", width: 44, height: 44, mt: 1 }}>
+                {isPaused ? <PlayArrowIcon fontSize="small" /> : <PauseIcon fontSize="small" />}
+              </IconButton>
             )}
             <Typography sx={{ mt: 1, textAlign: "center", fontFamily: "'Catchy'", color: "#24777D", fontSize: "0.9rem" }}>
               {hasMultiplePhotos ? "Deslizá para ver más · Tocá la foto para ampliarla" : "Tocá la foto para ampliarla"}
@@ -204,6 +191,7 @@ const Gallery = () => {
               <Swiper
                 modules={[A11y, Keyboard]}
                 slidesPerView={1}
+                centeredSlides
                 initialSlide={selectedIndex}
                 loop={hasMultiplePhotos}
                 speed={reduceMotion ? 0 : 350}

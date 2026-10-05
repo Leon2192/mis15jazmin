@@ -101,9 +101,10 @@ const Gift = () => {
               bgcolor: "#fdfaff", // más claro
               borderRadius: 3,
               boxShadow: 24,
-              p: 4,
+              p: { xs: 3, md: 4 },
               maxWidth: 600,
-              width: "90%", // responsive
+              width: "calc(100% - 32px)",
+              boxSizing: "border-box",
               textAlign: "center",
             }}
           >
@@ -152,9 +153,9 @@ const Gift = () => {
               mb: 1,
               fontWeight:700,
             }}>
-              Nombre del Titular: Abril Lucia Maldonado Molas
+              Nombre del titular: Jazmin Maria Aquino
               <br />
-              Alias: abril.mld.mp
+              Alias: jazminaquino
         
             </Typography>
 
