@@ -1,0 +1,27 @@
+# Dependencias y compilación
+node_modules/
+dist/
+dist-ssr/
+.vite/
+coverage/
+
+# Configuración local
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.local
+
+# Registros
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Archivos del sistema y del editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
